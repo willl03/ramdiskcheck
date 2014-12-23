@@ -16,6 +16,9 @@
 /init			u:object_r:rootfs:s0
 /sbin(/.*)?		u:object_r:rootfs:s0
 
+# Yank555.lu - add private shell for kernel config
+/res/sbin/sh		u:object_r:rootfs:s0
+
 # Empty directories
 /lost\+found		u:object_r:rootfs:s0
 /proc			u:object_r:rootfs:s0
@@ -533,7 +536,7 @@
 /system/bin/test-fake-ap                        u:object_r:location_exec:s0
 /system/bin/loc_api_app                         u:object_r:location_exec:s0
 /system/bin/test_loc_api_client                 u:object_r:location_exec:s0
-#line 1 "vendor/slim/sepolicy/file_contexts"
+#line 1 "vendor/cm/sepolicy/file_contexts"
 /cache/dalvik-cache(/.*)? u:object_r:dalvikcache_data_file:s0
 
 # Auditd is a logging daemon. Put it into logd's context
